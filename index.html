@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Responsive Registration Form</title>
+    <meta name="description" content="Cheesy registration form" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- <link
+      href="https://fonts.googleapis.com/css?family=Merriweather|Muli:300"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Mulish:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>the code review</h1>
+    </header>
+
+    <main>
+      <div class="form-description">
+        <h2>Signup for our newsletter</h2>
+        <p>Get the latest news on how your code is doing in your inbox</p>
+      </div>
+
+      <form>
+        <fieldset class="contact-information">
+          <legend>Contact Information</legend>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="user-name" />
+
+          <label for="email">Email Address</label>
+          <input type="text" id="email" name="user-email" />
+
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="user-phone" />
+
+          <label for="address">Street Address</label>
+          <input type="text" id="address" name="user-address" />
+
+          <label for="city">City</label>
+          <input type="text" id="city" name="user-city" />
+
+          <label for="state">State</label>
+          <input type="text" id="state" name="user-state" />
+
+          <label for="zipcode">Zip Code</label>
+          <input type="text" id="zipcode" name="user-zipcode" />
+        </fieldset>
+
+        <fieldset class="newsletter">
+          <h2>Newsletter</h2>
+
+          <div class="newsletter-container">
+            <label class="label-description"
+              >Select the newsletter you would like to receive</label
+            >
+            <input
+              type="checkbox"
+              id="html_news"
+              value="newsletter_html_news"
+              name="user_newsletter"
+            /><label for="html_news">HTML News</label><br />
+            <input
+              type="checkbox"
+              id="css_news"
+              value="newsletter_css_news"
+              name="user_newsletter"
+            /><label for="css_news">CSS News</label><br />
+            <input
+              type="checkbox"
+              id="javascript_news"
+              value="newsletter_javascript_news"
+              name="user_newsletter"
+            /><label for="javascript_news">Javascript News</label><br />
+
+            <label class="label-description">Newsletter format</label>
+            <input
+              type="radio"
+              id="html"
+              value="html"
+              name="user_newsletter_format"
+            /><label for="html">HTML</label><br />
+            <input
+              type="radio"
+              id="plain_text"
+              value="plain_text"
+              name="user_newsletter_format"
+            /><label for="plain_text">Plain text</label><br />
+
+            <label class="label-description"
+              >Other topics you'd like to hear about</label
+            >
+            <textarea name="user_newsletter_textarea" id="textarea"></textarea>
+          </div>
+        </fieldset>
+        <button type="submit">Sing Up</button>
+      </form>
+
+      <footer>
+        <p>Copyright The Code Review</p>
+      </footer>
+    </main>
+  </body>
+</html>
