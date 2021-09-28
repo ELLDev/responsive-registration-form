@@ -5,18 +5,8 @@
     <meta name="description" content="Cheesy registration form" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
-    <!-- <link
-      href="https://fonts.googleapis.com/css?family=Merriweather|Muli:300"
-      rel="stylesheet"
-    />
-
     <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap"
-      rel="stylesheet"
-    /> -->
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Mulish:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Mulish:ital,wght@0,300;1,300&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -35,26 +25,57 @@
       <form>
         <fieldset class="contact-information">
           <legend>Contact Information</legend>
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="user-name" />
+          <div class="input-container">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="user_name"
+              placeholder="Required"
+            />
+          </div>
 
-          <label for="email">Email Address</label>
-          <input type="text" id="email" name="user-email" />
+          <div class="input-container">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="user_email"
+              placeholder="Required"
+            />
+          </div>
 
-          <label for="phone">Phone Number</label>
-          <input type="text" id="phone" name="user-phone" />
+          <div class="input-container">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="user_phone" />
+          </div>
 
-          <label for="address">Street Address</label>
-          <input type="text" id="address" name="user-address" />
+          <div class="input-container">
+            <label for="address">Street Address</label>
+            <input type="text" id="address" name="user_address" />
+          </div>
 
-          <label for="city">City</label>
-          <input type="text" id="city" name="user-city" />
+          <div class="input-container">
+            <label for="city">City</label>
+            <input type="text" id="city" name="user_city" />
+          </div>
 
-          <label for="state">State</label>
-          <input type="text" id="state" name="user-state" />
+          <div class="input-container">
+            <label for="state">State</label>
+            <select id="state" name="user_state" required>
+              <option id="disabled_option" value="" disabled selected hidden>
+                Choose State
+              </option>
+              <option value="ohio">Ohio</option>
+              <option value="ny">Ny</option>
+              <option value="cali">Cali</option>
+            </select>
+          </div>
 
-          <label for="zipcode">Zip Code</label>
-          <input type="text" id="zipcode" name="user-zipcode" />
+          <div class="input-container zipcode-container">
+            <label for="zipcode">Zip Code</label>
+            <input type="text" id="zipcode" name="user_zipcode" />
+          </div>
         </fieldset>
 
         <fieldset class="newsletter">

@@ -9,6 +9,7 @@ body {
   font-family: "Mulish", sans-serif;
 }
 
+/* Section Styles */
 header {
   background-color: #2d3945;
 }
@@ -41,7 +42,7 @@ h1 {
 
 .form-description p {
   text-align: center;
-  color: #7a7a7a
+  color: #7a7a7a;
 }
 
 form {
@@ -75,6 +76,12 @@ label {
   font-size: 1rem;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #5b84af;
+}
+
 .contact-information input {
   margin-bottom: 1rem;
   padding: 1rem 0.5rem;
@@ -82,6 +89,73 @@ label {
   border: none;
   border-radius: 5px;
   background-color: #eff0f1;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  margin-right: 0.5rem;
+  padding: 0;
+  font-size: 0.8rem;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: italic;
+  text-align: right;
+  color: #999999;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  margin-right: 0.5rem;
+  padding: 0;
+  font-size: 0.8rem;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: italic;
+  text-align: right;
+  color: #999999;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  margin-right: 0.5rem;
+  padding: 0;
+  font-size: 0.8rem;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: italic;
+  text-align: right;
+  color: #999999;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  margin-right: 0.5rem;
+  padding: 0;
+  font-size: 0.8rem;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: italic;
+  text-align: right;
+  color: #999999;
+}
+
+select {
+  margin-bottom: 1rem;
+  padding: 1rem 0.5rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #eff0f1;
+}
+
+select:invalid {
+  color: #999999;
+}
+
+option[value="ohio"],
+option[value="ny"],
+option[value="cali"] {
+  color: #2d3945;
 }
 
 #zipcode {
@@ -160,4 +234,153 @@ footer p {
   font-style: italic;
   text-align: center;
   text-emphasis: initial;
+}
+
+/* Styles for larger screens */
+@media (min-width: 768px) {
+  h1 {
+    padding: 0.9rem 0;
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+
+  .form-description {
+    margin: 2.5rem 12rem 0;
+    padding-bottom: 1.5rem;
+    border-bottom: solid 0.2rem #2d3945;
+  }
+
+  .form-description h2 {
+    font-size: 1rem;
+    font-weight: 900;
+  }
+
+  .form-description p {
+    margin: 0.25rem 0;
+    font-size: 0.7rem;
+  }
+
+  form {
+    margin: 0.1rem 12rem 1rem;
+    border-top: solid 0.1rem #2d3945;
+  }
+
+  .contact-information legend,
+  .newsletter h2 {
+    margin: 0 0 0.2rem;
+    padding: 1.75rem 0 0;
+    font-size: 0.8rem;
+  }
+
+  .input-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.8rem 0;
+  }
+
+  label {
+    margin: auto 0;
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+
+  .contact-information input,
+  select {
+    margin: 0;
+    padding: 0.55rem 0.5rem;
+    width: 38vw;
+    border-radius: 3px;
+  }
+
+  select:invalid {
+    color: #999999;
+    font-size: 0.7rem;
+  }
+
+  .zipcode-container {
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  #zipcode {
+    margin: 0;
+    margin-right: 24vw;
+    width: 14vw;
+  }
+
+  ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 0.6rem;
+  }
+
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 0.6rem;
+  }
+
+  :-ms-input-placeholder {
+    /* IE 10+ */
+    font-size: 0.6rem;
+  }
+
+  :-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 0.6rem;
+  }
+
+  .newsletter-container {
+    margin: 0;
+  }
+  .newsletter h2 {
+    margin-bottom: 1rem;
+  }
+  .newsletter label.label-description {
+    margin-bottom: 0.5rem;
+  }
+
+  label[for="html_news"],
+  label[for="css_news"],
+  label[for="javascript_news"],
+  label[for="user_newsletter"],
+  label[for="html"],
+  label[for="plain_text"] {
+    margin: 0 0 1rem 0.5rem;
+  }
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin: 0 0 0.5rem;
+    transform: scale(0.8);
+    border-radius: 3px;
+  }
+  .checkbox-container {
+    display: flex;
+    justify-content:left;
+    align-items: center;
+  }
+
+  .newsletter label.label-description {
+    margin-top: 0.8rem;
+  }
+
+  textarea {
+    padding: 0.5rem 0.5rem 2rem;
+    border-radius: 3px;
+  }
+
+  button {
+    margin: 0 auto;
+    padding: 0.75rem 2rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+  }
+
+  footer {
+    margin-top: 1.3rem;
+    margin-bottom: 12rem;
+  }
+
+  footer p {
+    font-size: 0.6rem;
+  }
 }
