@@ -245,8 +245,10 @@ footer p {
   }
 
   .form-description {
-    margin: 2.5rem 12rem 0;
+    margin: 2.5rem auto 0;
     padding-bottom: 1.5rem;
+    width: 50vw;
+    max-width: 768px;
     border-bottom: solid 0.2rem #2d3945;
   }
 
@@ -261,7 +263,9 @@ footer p {
   }
 
   form {
-    margin: 0.1rem 12rem 1rem;
+    margin: 0.1rem auto 1rem;
+    width: 50vw;
+    max-width: 768px;
     border-top: solid 0.1rem #2d3945;
   }
 
@@ -288,7 +292,7 @@ footer p {
   select {
     margin: 0;
     padding: 0.55rem 0.5rem;
-    width: 38vw;
+    width: 76%;
     border-radius: 3px;
   }
 
@@ -304,8 +308,8 @@ footer p {
 
   #zipcode {
     margin: 0;
-    margin-right: 24vw;
-    width: 14vw;
+    margin-right: 48%;
+    width: 28%;
   }
 
   ::-webkit-input-placeholder {
