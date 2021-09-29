@@ -204,15 +204,14 @@ input[id="zipcode"]:-ms-input-placeholder {
   color: #999999;
 }
 
-select {
+select,
+select:invalid {
   margin-bottom: 1rem;
   padding: 1rem 0.5rem;
   width: 100%;
   border: none;
   border-radius: 5px;
   background-color: #eff0f1;
-  -moz-appearance: none;
-  -webkit-appearance: none;
   appearance: none;
   background-image: url("../images/sort-solid.svg");
   background-repeat: no-repeat;
@@ -222,12 +221,15 @@ select {
 
 select:invalid {
   color: #999999;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
-option[value="ohio"],
-option[value="ny"],
-option[value="cali"] {
+option {
   color: #2d3945;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
 }
 
 #zipcode {
@@ -273,11 +275,6 @@ input[type="radio"] {
   margin: 0 0 1rem;
 }
 
-input:checked::after {
-  color: red;
-  background-color: green;
-}
-
 textarea {
   margin-bottom: 1rem;
   padding: 0.5rem 0.5rem 4rem;
@@ -295,10 +292,24 @@ button {
   border-radius: 5px;
   border: none;
   color: #fff;
-  background-color: #ffc740;
+  background-color: #ffca4f;
   font-family: "Merriweather", serif;
   font-size: 1.15rem;
   font-weight: 700;
+  text-shadow: 1px 1px 0 #093db3;
+}
+
+button:hover {
+  background-color: #ffc740;
+  box-shadow: inset 0 0 10px #cc9e33;
+  text-shadow: none;
+  transition: 0.3s;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: inset 0 0 10px #cc9e33;
+  transition: 0.3s;
 }
 
 footer {
@@ -374,7 +385,8 @@ footer p {
   }
 
   .contact-information input,
-  select {
+  select,
+  select:invalid {
     margin: 0;
     padding: 0.55rem 0.5rem;
     width: 76%;
@@ -382,8 +394,7 @@ footer p {
   }
 
   select:invalid {
-    color: #999999;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 
   .zipcode-container {
@@ -397,19 +408,42 @@ footer p {
     width: 28%;
   }
 
-  ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  input[id="name"]::-webkit-input-placeholder,
+  input[id="email"]::-webkit-input-placeholder {
     font-size: 0.6rem;
   }
 
-  ::-moz-placeholder {
+  input[id="phone"]::-webkit-input-placeholder,
+  input[id="address"]::-webkit-input-placeholder,
+  input[id="city"]::-webkit-input-placeholder,
+  input[id="zipcode"]::-webkit-input-placeholder {
     font-size: 0.6rem;
   }
 
-  ::-ms-input-placeholder {
+  /* Firefox 19+ */
+  input[id="name"]::-moz-placeholder,
+  input[id="email"]::-moz-placeholder {
     font-size: 0.6rem;
   }
 
-  :-ms-input-placeholder {
+  input[id="phone"]::-moz-placeholder,
+  input[id="address"]::-moz-placeholder,
+  input[id="city"]::-moz-placeholder,
+  input[id="zipcode"]::-moz-placeholder {
+    font-size: 0.6rem;
+  }
+
+  /* Edge */
+  input[id="name"]::-ms-input-placeholder,
+  input[id="email"]::-ms-input-placeholder {
+    font-size: 0.6rem;
+  }
+
+  input[id="phone"]::-ms-input-placeholder,
+  input[id="address"]::-ms-input-placeholder,
+  input[id="city"]::-ms-input-placeholder,
+  input[id="zipcode"]::-ms-input-placeholder {
     font-size: 0.6rem;
   }
 
@@ -423,9 +457,9 @@ footer p {
     margin-bottom: 0.5rem;
   }
 
-  label[for="fresh"],
-  label[for="bloomy_rind"],
-  label[for="washed_rind"],
+  label[for="soft_cheeses"],
+  label[for="semisoft_cheeses"],
+  label[for="hard_cheeses"],
   label[for="user_newsletter"],
   label[for="hourly"],
   label[for="minute_by_minute"] {
