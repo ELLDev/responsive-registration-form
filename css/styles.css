@@ -11,7 +11,8 @@ body {
 
 /* Section Styles */
 header {
-  background-color: #2d3945;
+  background-size: cover;
+  background-image: url("../images/chiss.png");
 }
 
 h1 {
@@ -23,12 +24,13 @@ h1 {
   font-size: 1.25rem;
   text-align: center;
   text-transform: uppercase;
+  text-shadow: 1px 1px 0 #093db3;
 }
 
 .form-description {
   margin: 2rem 1rem 0;
   padding-bottom: 2rem;
-  border-bottom: solid 0.3rem #2d3945;
+  border-bottom: solid 0.3rem #ffc740;
 }
 
 .form-description h2 {
@@ -38,6 +40,7 @@ h1 {
   font-size: 1.25rem;
   font-weight: 900;
   text-align: center;
+  color: #093db3;
 }
 
 .form-description p {
@@ -47,7 +50,7 @@ h1 {
 
 form {
   margin: 0.2rem 1rem 1rem;
-  border-top: solid 0.15rem #2d3945;
+  border-top: solid 0.15rem #ffc740;
 }
 
 fieldset {
@@ -56,14 +59,10 @@ fieldset {
   border: none;
 }
 
-.contact-information fieldset {
-  border-bottom: solid 0.15rem #2d3945;
-}
-
 .contact-information legend {
   margin: 0 0 1.25rem;
   padding: 1.5rem 0 0;
-  color: #2d3945;
+  color: #093db3;
   font-family: "Merriweather", serif;
   font-size: 1.25rem;
   font-weight: 900;
@@ -79,7 +78,7 @@ label {
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 2px solid #5b84af;
+  outline: 2px solid #ffc740;
 }
 
 .contact-information input {
@@ -91,8 +90,26 @@ textarea:focus {
   background-color: #eff0f1;
 }
 
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
+input:focus,
+select:focus,
+textarea:focus {
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 0 5px 3px #ffc740;
+  background-color: #fff6e3;
+  transition: 0.2s;
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  box-shadow: none;
+  outline: 3px dotted #ffc740;
+}
+
+/* Chrome/Opera/Safari */
+input[id="name"]::-webkit-input-placeholder,
+input[id="email"]::-webkit-input-placeholder {
   margin-right: 0.5rem;
   padding: 0;
   font-size: 0.8rem;
@@ -103,8 +120,21 @@ textarea:focus {
   color: #999999;
 }
 
-::-moz-placeholder {
-  /* Firefox 19+ */
+input[id="phone"]::-webkit-input-placeholder,
+input[id="address"]::-webkit-input-placeholder,
+input[id="city"]::-webkit-input-placeholder,
+input[id="zipcode"]::-webkit-input-placeholder {
+  margin: 0;
+  font-size: 0.8rem;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  text-align: left;
+  color: #999999;
+}
+
+/* Firefox 19+ */
+input[id="name"]::-moz-placeholder,
+input[id="email"]::-moz-placeholder {
   margin-right: 0.5rem;
   padding: 0;
   font-size: 0.8rem;
@@ -115,8 +145,21 @@ textarea:focus {
   color: #999999;
 }
 
-:-ms-input-placeholder {
-  /* IE 10+ */
+input[id="phone"]::-moz-placeholder,
+input[id="address"]::-moz-placeholder,
+input[id="city"]::-moz-placeholder,
+input[id="zipcode"]::-moz-placeholder {
+  margin: 0;
+  font-size: 0.8rem;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  text-align: left;
+  color: #999999;
+}
+
+/* Edge */
+input[id="name"]::-ms-input-placeholder,
+input[id="email"]::-ms-input-placeholder {
   margin-right: 0.5rem;
   padding: 0;
   font-size: 0.8rem;
@@ -127,15 +170,37 @@ textarea:focus {
   color: #999999;
 }
 
-:-moz-placeholder {
-  /* Firefox 18- */
-  margin-right: 0.5rem;
-  padding: 0;
+input[id="phone"]::-ms-input-placeholder,
+input[id="address"]::-ms-input-placeholder,
+input[id="city"]::-ms-input-placeholder,
+input[id="zipcode"]::-ms-input-placeholder {
+  margin: 0;
   font-size: 0.8rem;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  text-align: left;
+  color: #999999;
+}
+
+/* IE 10+ */
+input[id="name"]:-ms-input-placeholder,
+input[id="email"]:-ms-input-placeholder {
   font-family: "Merriweather", serif;
   font-weight: 400;
   font-style: italic;
   text-align: right;
+  color: #999999;
+}
+
+input[id="phone"]:-ms-input-placeholder,
+input[id="address"]:-ms-input-placeholder,
+input[id="city"]:-ms-input-placeholder,
+input[id="zipcode"]:-ms-input-placeholder {
+  margin: 0;
+  font-size: 0.8rem;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  text-align: left;
   color: #999999;
 }
 
@@ -146,6 +211,13 @@ select {
   border: none;
   border-radius: 5px;
   background-color: #eff0f1;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("../images/sort-solid.svg");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%, 0 0;
+  background-size: 0.55rem auto, 100%;
 }
 
 select:invalid {
@@ -164,13 +236,13 @@ option[value="cali"] {
 }
 
 .newsletter {
-  border-top: solid 0.15rem #2d3945;
+  border-top: solid 0.15rem #ffc740;
 }
 
 .newsletter h2 {
   margin: 0 0 1.25rem;
   padding-top: 1.5rem;
-  color: #2d3945;
+  color: #093db3;
   font-family: "Merriweather", serif;
   font-size: 1.25rem;
   font-weight: 900;
@@ -185,12 +257,12 @@ option[value="cali"] {
   margin: 1rem 0;
 }
 
-label[for="html_news"],
-label[for="css_news"],
-label[for="javascript_news"],
+label[for="soft_cheeses"],
+label[for="semisoft_cheeses"],
+label[for="hard_cheeses"],
 label[for="user_newsletter"],
-label[for="html"],
-label[for="plain_text"] {
+label[for="hourly"],
+label[for="minute_by_minute"] {
   display: inline;
   margin-left: 1rem;
   margin-bottom: 1rem;
@@ -199,6 +271,11 @@ label[for="plain_text"] {
 input[type="checkbox"],
 input[type="radio"] {
   margin: 0 0 1rem;
+}
+
+input:checked::after {
+  color: red;
+  background-color: green;
 }
 
 textarea {
@@ -218,7 +295,7 @@ button {
   border-radius: 5px;
   border: none;
   color: #fff;
-  background-color: #4ebbb5;
+  background-color: #ffc740;
   font-family: "Merriweather", serif;
   font-size: 1.15rem;
   font-weight: 700;
@@ -238,6 +315,10 @@ footer p {
 
 /* Styles for larger screens */
 @media (min-width: 768px) {
+  header {
+    background-size: contain;
+  }
+
   h1 {
     padding: 0.9rem 0;
     font-size: 0.75rem;
@@ -288,6 +369,10 @@ footer p {
     white-space: nowrap;
   }
 
+  select {
+    background-size: 0.45rem auto, 100%;
+  }
+
   .contact-information input,
   select {
     margin: 0;
@@ -313,22 +398,18 @@ footer p {
   }
 
   ::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
     font-size: 0.6rem;
   }
 
   ::-moz-placeholder {
-    /* Firefox 19+ */
+    font-size: 0.6rem;
+  }
+
+  ::-ms-input-placeholder {
     font-size: 0.6rem;
   }
 
   :-ms-input-placeholder {
-    /* IE 10+ */
-    font-size: 0.6rem;
-  }
-
-  :-moz-placeholder {
-    /* Firefox 18- */
     font-size: 0.6rem;
   }
 
@@ -342,15 +423,15 @@ footer p {
     margin-bottom: 0.5rem;
   }
 
-  label[for="html_news"],
-  label[for="css_news"],
-  label[for="javascript_news"],
+  label[for="fresh"],
+  label[for="bloomy_rind"],
+  label[for="washed_rind"],
   label[for="user_newsletter"],
-  label[for="html"],
-  label[for="plain_text"] {
+  label[for="hourly"],
+  label[for="minute_by_minute"] {
     margin: 0 0 1rem 0.5rem;
   }
-  
+
   input[type="checkbox"],
   input[type="radio"] {
     margin: 0 0 0.5rem;
@@ -359,7 +440,7 @@ footer p {
   }
   .checkbox-container {
     display: flex;
-    justify-content:left;
+    justify-content: left;
     align-items: center;
   }
 
