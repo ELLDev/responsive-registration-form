@@ -123,7 +123,8 @@ input[id="email"]::-webkit-input-placeholder {
 input[id="phone"]::-webkit-input-placeholder,
 input[id="address"]::-webkit-input-placeholder,
 input[id="city"]::-webkit-input-placeholder,
-input[id="zipcode"]::-webkit-input-placeholder {
+input[id="zipcode"]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
   margin: 0;
   font-size: 0.8rem;
   font-family: "Merriweather", serif;
@@ -135,26 +136,25 @@ input[id="zipcode"]::-webkit-input-placeholder {
 /* Firefox 19+ */
 input[id="name"]::-moz-placeholder,
 input[id="email"]::-moz-placeholder {
-  margin-right: 0.5rem;
-  padding: 0;
   font-size: 0.8rem;
   font-family: "Merriweather", serif;
   font-weight: 400;
   font-style: italic;
   text-align: right;
-  color: #999999;
+  color: #505050;
 }
 
 input[id="phone"]::-moz-placeholder,
 input[id="address"]::-moz-placeholder,
 input[id="city"]::-moz-placeholder,
-input[id="zipcode"]::-moz-placeholder {
+input[id="zipcode"]::-moz-placeholder,
+textarea::-moz-placeholder {
   margin: 0;
   font-size: 0.8rem;
   font-family: "Merriweather", serif;
   font-weight: 400;
   text-align: left;
-  color: #999999;
+  color: #505050;
 }
 
 /* Edge */
@@ -173,7 +173,8 @@ input[id="email"]::-ms-input-placeholder {
 input[id="phone"]::-ms-input-placeholder,
 input[id="address"]::-ms-input-placeholder,
 input[id="city"]::-ms-input-placeholder,
-input[id="zipcode"]::-ms-input-placeholder {
+input[id="zipcode"]::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
   margin: 0;
   font-size: 0.8rem;
   font-family: "Merriweather", serif;
@@ -195,7 +196,8 @@ input[id="email"]:-ms-input-placeholder {
 input[id="phone"]:-ms-input-placeholder,
 input[id="address"]:-ms-input-placeholder,
 input[id="city"]:-ms-input-placeholder,
-input[id="zipcode"]:-ms-input-placeholder {
+input[id="zipcode"]:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
   margin: 0;
   font-size: 0.8rem;
   font-family: "Merriweather", serif;
@@ -275,6 +277,16 @@ input[type="radio"] {
   margin: 0 0 1rem;
 }
 
+input + label,
+br {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
 textarea {
   margin-bottom: 1rem;
   padding: 0.5rem 0.5rem 4rem;
@@ -341,7 +353,7 @@ footer p {
     padding-bottom: 1.5rem;
     width: 50vw;
     max-width: 768px;
-    border-bottom: solid 0.2rem #2d3945;
+    border-bottom: solid 0.2rem #ffc740;
   }
 
   .form-description h2 {
@@ -358,7 +370,7 @@ footer p {
     margin: 0.1rem auto 1rem;
     width: 50vw;
     max-width: 768px;
-    border-top: solid 0.1rem #2d3945;
+    border-top: solid 0.1rem #ffc740;
   }
 
   .contact-information legend,
@@ -404,8 +416,8 @@ footer p {
 
   #zipcode {
     margin: 0;
-    margin-right: 48%;
-    width: 28%;
+    margin-right: calc(76% - 25%);
+    width: 25%;
   }
 
   /* Chrome/Opera/Safari */
@@ -417,7 +429,8 @@ footer p {
   input[id="phone"]::-webkit-input-placeholder,
   input[id="address"]::-webkit-input-placeholder,
   input[id="city"]::-webkit-input-placeholder,
-  input[id="zipcode"]::-webkit-input-placeholder {
+  input[id="zipcode"]::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
     font-size: 0.6rem;
   }
 
@@ -430,7 +443,8 @@ footer p {
   input[id="phone"]::-moz-placeholder,
   input[id="address"]::-moz-placeholder,
   input[id="city"]::-moz-placeholder,
-  input[id="zipcode"]::-moz-placeholder {
+  input[id="zipcode"]::-moz-placeholder,
+  textarea::-moz-placeholder {
     font-size: 0.6rem;
   }
 
@@ -443,7 +457,8 @@ footer p {
   input[id="phone"]::-ms-input-placeholder,
   input[id="address"]::-ms-input-placeholder,
   input[id="city"]::-ms-input-placeholder,
-  input[id="zipcode"]::-ms-input-placeholder {
+  input[id="zipcode"]::-ms-input-placeholder,
+  textarea::-ms-input-placeholder {
     font-size: 0.6rem;
   }
 
